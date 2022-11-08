@@ -1,0 +1,213 @@
+result
+   |    
+   |--- Activity
+   |       |    
+   |       |-- Data
+   |       |-- Time
+   |    
+   |--- GH
+   |       |    
+   |       |--- CROP
+   |       |       |    
+   |       |       |--- Carbon
+   |       |       |       |    
+   |       |       |       |--- Cbuff
+   |       |       |       |-- Cfruit
+   |       |       |       |--- Cleaf
+   |       |       |       |--- Cstem
+   |       |       |    
+   |       |       |--- HeatVars
+   |       |       |       |    
+   |       |       |       |-------- QS
+   |       |       |       |-------- QT
+   |       |       |       |-------- QV
+   |       |       |       |------ Tveg
+   |       |       |       |-- TvegMean
+   |       |       |    
+   |       |       |--- MC_gro
+   |       |       |       |    
+   |       |       |       |-- MC_buf_fruit
+   |       |       |       |--- MC_buf_leaf
+   |       |       |       |--- MC_buf_stem
+   |       |       |    
+   |       |       |--- Nutrients
+   |       |       |       |    
+   |       |       |       |-- Demand
+   |       |       |       |---- Mass
+   |       |       |    
+   |       |       |--- Relative
+   |       |       |       |    
+   |       |       |       |-- Rfruit
+   |       |       |       |--- Rleaf
+   |       |       |       |--- Rstem
+   |       |       |    
+   |       |       |--- Water
+   |       |       |       |    
+   |       |       |       |--- Distribution
+   |       |       |       |       |    
+   |       |       |       |       |--- Cbuff
+   |       |       |       |       |-- Cfruit
+   |       |       |       |       |--- Cleaf
+   |       |       |       |       |--- Cstem
+   |       |       |       |    
+   |       |       |       |--- WaterFlows
+   |       |       |       |       |    
+   |       |       |       |       |-------- MW_QT
+   |       |       |       |       |-- WaterDemand
+   |       |       |       |       |-- WaterUptake
+   |       |       |       |    
+   |       |       |       |--- WaterState
+   |       |       |       |       |    
+   |       |       |       |       |-- VegWater
+   |       |       |       |    
+   |       |       |    
+   |       |       |--- carbon_cc
+   |       |       |       |    
+   |       |       |       |---- MC_buf_i
+   |       |       |       |-- MC_fruit_i
+   |       |       |       |---- MC_i_buf
+   |       |       |       |--- MC_leaf_i
+   |       |       |       |--- MC_stem_i
+   |       |       |    
+   |       |       |--- h
+   |       |       |       |    
+   |       |       |       |------- g_T_v24
+   |       |       |       |--------- h_T_v
+   |       |       |       |------- h_T_v24
+   |       |       |       |------ h_T_vsum
+   |       |       |       |-- h_buforg_buf
+   |       |       |       |---------- hini
+   |       |       |    
+   |       |       |--- photo
+   |       |       |       |    
+   |       |       |       |-- C_stom
+   |       |       |       |--- Gamma
+   |       |       |       |------- J
+   |       |       |       |--- J_pot
+   |       |       |       |------- P
+   |       |       |       |----- PAR
+   |       |       |       |---- Resp
+   |       |       |    
+   |       |       |------------- A_v
+   |       |       |-------------- CC
+   |       |       |--------- C_Total
+   |       |       |------------- LAI
+   |       |       |------------ Tsum
+   |       |       |------------- VPD
+   |       |       |-------------- WC
+   |       |       |---- WaterPercent
+   |       |       |-- plants_density
+   |       |    
+   |       |--- EC
+   |       |       |    
+   |       |       |-- Cppm
+   |       |       |---- HR
+   |       |       |--- Rad
+   |       |       |-- Temp
+   |       |       |-- Wind
+   |       |    
+   |       |--- IC
+   |       |       |    
+   |       |       |--- Gas
+   |       |       |       |    
+   |       |       |       |--- MC
+   |       |       |       |       |    
+   |       |       |       |       |--- MC_i_e
+   |       |       |       |       |-- MC_pump
+   |       |       |       |       |--- MC_v_i
+   |       |       |       |    
+   |       |       |       |--- MW
+   |       |       |       |       |    
+   |       |       |       |       |-- MW_i_e
+   |       |       |       |       |-- QP_i_c
+   |       |       |       |       |-- QP_i_f
+   |       |       |       |       |------ QT
+   |       |       |       |       |---- Qfog
+   |       |       |       |    
+   |       |       |       |---------- C_c
+   |       |       |       |------ C_c_ppm
+   |       |       |       |--------- C_ce
+   |       |       |       |----- C_ce_ppm
+   |       |       |       |---------- C_w
+   |       |       |       |-- C_w_sat_T_c
+   |       |       |       |-- C_w_sat_T_f
+   |       |       |       |-------- HRInt
+   |       |       |       |----------- Xh
+   |       |       |       |------- Xh_sat
+   |       |       |       |---- air_speed
+   |       |       |       |---------- p_a
+   |       |       |       |-------- rho_i
+   |       |       |    
+   |       |       |--- QD
+   |       |       |       |    
+   |       |       |       |-- QD_s12
+   |       |       |       |-- QD_sf1
+   |       |       |    
+   |       |       |--- QR
+   |       |       |       |    
+   |       |       |       |-- QR_c_e
+   |       |       |    
+   |       |       |--- QS
+   |       |       |       |    
+   |       |       |       |-- QS_c_abs
+   |       |       |       |-- QS_f_abs
+   |       |       |       |-- QS_i_abs
+   |       |       |       |---- QS_tot
+   |       |       |       |----- R_int
+   |       |       |    
+   |       |       |--- QT
+   |       |       |       |    
+   |       |       |       |---- QT
+   |       |       |       |-- Qfog
+   |       |       |    
+   |       |       |--- QV
+   |       |       |       |    
+   |       |       |       |-- QV_c_e
+   |       |       |       |---- QV_i
+   |       |       |       |-- QV_i_c
+   |       |       |       |-- QV_i_e
+   |       |       |       |-- QV_i_f
+   |       |       |    
+   |       |       |--- Temp
+   |       |       |       |    
+   |       |       |       |---- Tair
+   |       |       |       |-- Tcover
+   |       |       |       |-- Tfloor
+   |       |       |       |--- Tsoil
+   |       |       |    
+   |       |       |----- R
+   |       |    
+   |       |-- TOMATO_EVOLUTION
+   |       |------ TOTAL_TOMATO
+   |       |-------------- time
+   |    
+   |--- OP
+   |       |    
+   |       |-- Data
+   |       |-- Time
+   |    
+   |--- POWER
+   |       |    
+   |       |-- Data
+   |       |-- Time
+   |    
+   |--- POWER_SOFC
+   |       |    
+   |       |-- Data
+   |       |-- Time
+   |    
+   |--- POWER_SOFC_e
+   |       |    
+   |       |-- Data
+   |       |-- Time
+   |    
+   |--- TOMATO
+   |       |    
+   |       |-- Data
+   |       |-- Time
+   |    
+   |--- Tw
+   |       |    
+   |       |-- Data
+   |       |-- Time
+   |    
