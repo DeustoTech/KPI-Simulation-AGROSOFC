@@ -7,3 +7,4 @@ unzip('https://github.com/DeustoTech/MechanisticSolarRadiationModel/archive/refs
 %%
 unzip('https://github.com/DeustoTech/KPI-Simulation-AGROSOFC/archive/refs/heads/main.zip','dependences')
 
+addpath(genpath(pwd))
