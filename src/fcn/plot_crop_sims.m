@@ -1,6 +1,11 @@
+
+function plot_crop_sims(simulation)
+
+parameters = simulation.parameters;
+result = simulation.result;
 sty = {'LineWidth',2};
 
-figure(1)
+%figure(1)
 clf
 subplot(6,1,1)
 plot(result.POWER.Time,1e-3*result.POWER.Data,sty{:})
@@ -49,3 +54,5 @@ subplot(6,1,6)
 hold on
 plot(result.Activity.Time,result.Activity.Data,sty{:},'LineStyle','--')
 legend('Deactivation')
+
+end

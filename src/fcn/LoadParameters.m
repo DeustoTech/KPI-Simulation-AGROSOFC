@@ -4,7 +4,7 @@ function parameters = LoadParameters()
 warning off
 
 parameters.Tref=16.5;
-
+parameters.MaxHour = 5;
 %% Cargamos los parametros por defecto del modelo de crop
 parameters.crop = struct(crop_p);
 

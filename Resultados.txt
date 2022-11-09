@@ -1,10 +1,5 @@
 result
    |    
-   |--- Activity
-   |       |    
-   |       |-- Data
-   |       |-- Time
-   |    
    |--- GH
    |       |    
    |       |--- CROP
@@ -181,32 +176,12 @@ result
    |       |------ TOTAL_TOMATO
    |       |-------------- time
    |    
-   |--- OP
-   |       |    
-   |       |-- Data
-   |       |-- Time
-   |    
    |--- POWER
    |       |    
    |       |-- Data
    |       |-- Time
    |    
-   |--- POWER_SOFC
-   |       |    
-   |       |-- Data
-   |       |-- Time
-   |    
-   |--- POWER_SOFC_e
-   |       |    
-   |       |-- Data
-   |       |-- Time
-   |    
    |--- TOMATO
-   |       |    
-   |       |-- Data
-   |       |-- Time
-   |    
-   |--- Tw
    |       |    
    |       |-- Data
    |       |-- Time
