@@ -7,23 +7,29 @@ data=xlsread('año2019completo.xlsx');
 %
 %% Temperature Exterior
 
-[Te,ind_Te] = rmoutliers(data((1:52560),1));
+%[Te,ind_Te] = rmoutliers(data((1:52560),1));
 
-tt.time = (time(~ind_Te));
-tt.signals.values = Te;
+tt.time = time;
+tt.signals.values = data(:,1);
  
 %% Radiation
 
-[Re,ind_Re] = rmoutliers(data((1:52560),3));
+%[Re,ind_Re] = rmoutliers(data((1:52560),3));
 
-Si.time = (time(~ind_Re));
-Si.signals.values = Re;
+Si.time = time;
+%Si.signals.values = data(:,3);
+Si.signals.values = smoothdata(data(:,3),'SmoothingFactor',0.025);
+%
+clf
+plot(data(:,3))
+hold on;plot(Si.signals.values)
+
 %% Wind
 
-[Wind,ind_Wind] = rmoutliers(data((1:52560),5));
+%[Wind,ind_Wind] = rmoutliers(data((1:52560),5));
 
-vv.time = (time(~ind_Wind));
-vv.signals.values = Wind;
+vv.time = time;
+vv.signals.values = data(:,5);
 %%
 load('data/CS3_2_ExteriorClima.mat')
 %

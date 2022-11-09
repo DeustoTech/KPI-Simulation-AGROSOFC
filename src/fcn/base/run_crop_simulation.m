@@ -1,6 +1,16 @@
 clear 
 open_system('crop_simulation')
 %%
+recompile = false;
+if recompile
+    % Opcion de simulion para acelerar la simulacion 
+    set_param('crop_simulation', 'MinimalZcImpactIntegration', 'on')
+    set_param('crop_simulation','SimulationMode','normal')
+    % Selecionamos el control PID para la generacion de la demanda de calor 
+    % (emulamos la simulacion de Izaro, pero esta vez con los modelos desarrollados en HortiMED Modelling Platform)
+    set_param('crop_simulation/Control Systems/Heater','LabelModeActiveChoice','PID')
+end
+%%
 % Cargamos las senales exteriores, 
 % Hours: Senal que nos da la hora del dia
 % Si: Radiacion Exterior 
@@ -21,6 +31,7 @@ open_system('crop_simulation')
 %       >> open LoadParameters.m 
 %
 parameters = LoadParameters();
+
 %
 % Creamos un fichero que contiene los parameteros selecionados 
 % text = printstruct(parameters,'printcontents', 1);
@@ -28,7 +39,7 @@ parameters = LoadParameters();
 %
 %% Simulation
 % Numero de dias de simulacion
-T = 10;
+T = 300;
 
 % Opcion de simulion para acelerar la simulacion 
 set_param('crop_simulation', 'MinimalZcImpactIntegration', 'on')
@@ -38,10 +49,12 @@ set_param('crop_simulation','SimulationMode','normal')
 rl = sim('crop_simulation','StopTime','T');
 %% 
 % En esta variable se encuentra todo los resultados de las simulacion
-result = parse_data(rl);
+result = parse_data_PID(rl);
 %% 
 % Utilizar esta funcion para ver alguna senales
-plot_crop_sims;
+simu.result = result;
+simu.parameters = parameters;
+plot_crop_sims_PID(simu);
 
 %%
 %load('rl')

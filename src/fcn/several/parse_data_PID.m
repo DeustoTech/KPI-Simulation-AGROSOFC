@@ -1,4 +1,4 @@
-function result = parse_data(rl)
+function result = parse_data_PID(rl)
 POWER = rl.logsout.getElement('Potencia calor').Values;
 TOMATO = rl.logsout.getElement('Tomato').Values;
 AR = rl.logsout.getElement('AR').Values;
@@ -29,6 +29,8 @@ dTom_dt = gradient(TOMATO.Data,TOMATO.Time);
 dTom_dt(dTom_dt<0) = 0;
 result.GH.TOMATO_EVOLUTION = cumtrapz(TOMATO.Time,dTom_dt);
 result.GH.TOTAL_TOMATO = result.GH.TOMATO_EVOLUTION(end);
+
+%%
 
 
 end
