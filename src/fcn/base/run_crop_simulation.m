@@ -39,11 +39,14 @@ parameters = LoadParameters();
 %
 %% Simulation
 % Numero de dias de simulacion
-T = 300;
+T = 365;
 
 % Opcion de simulion para acelerar la simulacion 
+set_param('crop_simulation','FastRestart','off')
 set_param('crop_simulation', 'MinimalZcImpactIntegration', 'on')
-set_param('crop_simulation','SimulationMode','normal')
+set_param('crop_simulation','SimulationMode','accelerator')
+%set_param('crop_simulation','FastRestart','on')
+
 %% 
 % Lanzamos la simulacion 
 rl = sim('crop_simulation','StopTime','T');
@@ -59,3 +62,9 @@ plot_crop_sims_PID(simu);
 %%
 %load('rl')
 %%
+name_file = 'simulation_data.txt';
+path_file = which(name_file);
+path_file = replace(path_file,name_file,'');
+%
+base_simulation = simu;
+save(fullfile(path_file,'..','base_simulation.mat'),'base_simulation')

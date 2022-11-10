@@ -3,3 +3,6 @@
 slprj/*
 *.slxc
 dependences/*
+
+data/old_sims/
+data/simulations/

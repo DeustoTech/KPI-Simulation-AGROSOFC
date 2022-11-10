@@ -1,5 +1,15 @@
 
-function plot_crop_sims(simulation)
+function plot_crop_sims(simulation,varargin)
+
+p = inputParser;
+
+addRequired(p,'simulation')
+addOptional(p,'title','')
+
+parse(p,simulation,varargin{:});
+
+title_string = p.Results.title;
+
 
 parameters = simulation.parameters;
 result = simulation.result;
@@ -11,6 +21,9 @@ subplot(5,1,1)
 plot(result.POWER.Time,1e-3*result.POWER.Data,sty{:})
 ylabel('Power [kW]')
 
+if ~isempty(title_string)
+   title(title_string) 
+end
 subplot(5,1,2)
 
 plot(result.TOMATO.Time,result.TOMATO.Data,sty{:})
@@ -36,6 +49,10 @@ legend('T_i','T_e','T_{set-point}')
 
 
 subplot(5,1,5)
-plot(result.AR.Time,cumtrapz(result.AR.Time,result.AR.Data)/(3600),sty{:})
-ylabel('Wh')
+hold on
+plot(result.AR.Time,cumtrapz(result.AR.Time,result.AR.Data)*24/1e6,sty{:})
+ylabel('MWh')
+yyaxis right 
+plot(result.AR.Time,result.AR.Data)
+ylabel('Artifitial Lighting [W]')
 end

@@ -18,11 +18,12 @@ parameters.climate = struct(climate_p);
 %
 parameters.climate.A_c          = 60;        % Area de cubierta del invernadero
 parameters.climate.A_f          = 60;        % Area de suelo
-parameters.climate.alpha_i      = 0.01;       % Coeficiente de absorcion de radiacion del aire en el invernadero [-]
-parameters.climate.alpha_f      = 0.001;     % Coeficiente de absorcion de radiacion del suelo en el invernadero [-]
-parameters.climate.tau_c        = 0.5;       % Coeficiente de transmisividad de radiacion de la cubierta del invernadero [-]
+parameters.climate.alpha_i      = 0.03;       % Coeficiente de absorcion de radiacion del aire en el invernadero [-]
+parameters.climate.alpha_f      = 0.1;% 1e-3     % Coeficiente de absorcion de radiacion del suelo en el invernadero [-]
+parameters.climate.tau_c        = 0.8;       % Coeficiente de transmisividad de radiacion de la cubierta del invernadero [-]
 parameters.climate.H            = 4;         % Altura del invernadero
-parameters.climate.minWindows   = 0.01;      % Coeficiente de hermeticidad del invernadero [-],   aunque las ventanas esten cerradas el invernadero tiene conveccion con el exterior por los defectos que puede tener su cubierta (agujeros, puertas, etc)
+parameters.climate.minWindows   = 0.025;% 0.01      % Coeficiente de hermeticidad del invernadero [-],   aunque las ventanas esten cerradas el invernadero tiene conveccion con el exterior por los defectos que puede tener su cubierta (agujeros, puertas, etc)
+parameters.climate.T_ss  = 273.15 + 15;
 %%
 
 %% SOFC 

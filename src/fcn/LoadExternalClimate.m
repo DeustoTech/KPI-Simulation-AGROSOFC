@@ -1,4 +1,6 @@
 
+
+
 function [Hours,tt,Si,vv,HR,ChangeDay] = LoadExternalClimate
 time0=600*(0:52559)';
 time = time0/(3600*24);
@@ -10,7 +12,7 @@ data=xlsread('año2019completo.xlsx');
 %[Te,ind_Te] = rmoutliers(data((1:52560),1));
 
 tt.time = time;
-tt.signals.values = data(:,1);
+tt.signals.values = smoothdata(data(:,1),'SmoothingFactor',0.025);
  
 %% Radiation
 
@@ -18,18 +20,19 @@ tt.signals.values = data(:,1);
 
 Si.time = time;
 %Si.signals.values = data(:,3);
-Si.signals.values = smoothdata(data(:,3),'SmoothingFactor',0.025);
+Si.signals.values = smoothdata(data(:,3),1,'gaussian','SmoothingFactor',0.1);
 %
-clf
-plot(data(:,3))
-hold on;plot(Si.signals.values)
-
+% clf
+% hold on
+% plot(data(:,3),'LineWidth',2)
+% plot(Si.signals.values,'LineWidth',2)
+% xlim([2.2 2.7]*1e4)
 %% Wind
 
 %[Wind,ind_Wind] = rmoutliers(data((1:52560),5));
 
 vv.time = time;
-vv.signals.values = data(:,5);
+vv.signals.values = smoothdata(data(:,5),'SmoothingFactor',0.025);
 %%
 load('data/CS3_2_ExteriorClima.mat')
 %
