@@ -34,7 +34,8 @@ Figure 2. Greenhouse temperature for different setpoint temperatures
 
 The daily accumulated radiation can be expressed as:
 
-  
+![](https://raw.githubusercontent.com/DeustoTech/KPI-Simulation-AGROSOFC/main/img/Eq1.png)
+
 where the unit of time is measured in days.
 
 This is the accumulated radiation that restarts every time the day changes. The artificial light control law tries to compensate the daily accumulated radiation  if it is very low. Since  is a function that increase as time goes by, we will check at 10pm each day what its value is, then if it is very low, the artificial light will be activated. The daily accumulated radiation is considered very low if it is below a controller parameter . In the base simulation, this value has , so on days when this value has not been reached at 10:00 p.m., artificial light will be activated. It should be said that the artificial light activation duration time is proportional to .
@@ -51,6 +52,8 @@ As we increase the minimum radiation, the artificial light system turns on more.
 Batch of Simulations
 The parameters of the accumulated radiation threshold per square meter   have been varied, as well as the reference temperature of the heater . A grid of values has been created for these two parameters following the following values:
 
+![](https://raw.githubusercontent.com/DeustoTech/KPI-Simulation-AGROSOFC/main/img/Table1.png)
+
 <center>
  Tabla 1 . Resultados en producción de las simulaciones
 </center>
@@ -59,6 +62,8 @@ Se ha simulado el sistema para cada combinación de valor (, ) dando lugar a  si
 The system has been simulated for each combination of value (, ) giving rise to  simulations.
 
 In the following figure we show the results of the simulations in terms of tomato production. Figure 3 shows Tomatoes against minimum radiation and setpoint temperature. In Figure 4, we show an interpolation of the simulations carried out, in order to find the optimal setpoints for the maximization of annual tomato production. In Table 2, we can see tomato production in the base simulation and the best simulation performed.
+
+![](https://raw.githubusercontent.com/DeustoTech/KPI-Simulation-AGROSOFC/main/img/Table2.png)
 
 <center>
 Table 2. Production results of the simulations
