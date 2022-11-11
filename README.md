@@ -6,6 +6,8 @@ University of Deusto
 
 For the calculations of the KPIs, a simulation model based on the HortiMED Modeling Platform library has been built. This is built on MATLAB Simulink. The greenhouse model takes into account a climate model, a tomato growth model and a tomato maturity model. In addition, a controller for a natural ventilation system, a shading screen control, and a heater that simulates the behavior of the sink and the water tank have been implemented. These controls were developed by Izaro Garro. In this implementation, the control laws and the control instructions considered in this work are considered.
 
+![](https://raw.githubusercontent.com/DeustoTech/KPI-Simulation-AGROSOFC/main/img/Fig1.png)
+
 Figura 1. Modelo de Simulink del invernadero
 
 Re-implementation of control laws
@@ -17,11 +19,12 @@ The controls have been modified, although with the same philosophy that Izaro pr
 
 
 
-
 Temperature setpoint variation effect
 
 The following Figure 2 shows how the variation of the temperature setpoint affects the simulation. The outside temperature is shown in black, while the different simulations with different setpoints are shown in color.
- 
+
+![](https://raw.githubusercontent.com/DeustoTech/KPI-Simulation-AGROSOFC/main/img/Fig2.png)
+
 Figure 2. Greenhouse temperature for different setpoint temperatures
 
 Effect of daily minimum accumulated radiation variation
@@ -35,7 +38,9 @@ This is the accumulated radiation that restarts every time the day changes. The 
 
 In order to find the best simulation we will do simulations each time with a larger value of  . In the following figure we can see the effect produced by a variation of .
 
-Figure 2. Greenhouse temperature for different values of 
+![](https://raw.githubusercontent.com/DeustoTech/KPI-Simulation-AGROSOFC/main/img/Fig3.png)
+
+Figure 3. Greenhouse temperature for different values of 
 As we increase the minimum radiation, the artificial light system turns on more.
 
 Batch of Simulations
@@ -55,17 +60,21 @@ Table 2. Production results of the simulations
 
 
 
+![](https://raw.githubusercontent.com/DeustoTech/KPI-Simulation-AGROSOFC/main/img/Fig4.png)
 
-Figure 3. 3D view of the simulations carried out.
+Figure 4. 3D view of the simulations carried out.
 Tomato produced for different set points
 
 
+![](https://raw.githubusercontent.com/DeustoTech/KPI-Simulation-AGROSOFC/main/img/Fig5.png)
 
-Figure 4. Interpolation by splines of the simulations carried out.
+Figure 5. Interpolation by splines of the simulations carried out.
 We can see a contour map that tells us where the optimal set-points are located.
 
+![](https://raw.githubusercontent.com/DeustoTech/KPI-Simulation-AGROSOFC/main/img/Fig6.png)
 
-Figure 5. Algunas señales de salida de la simulación para el estado base.
+
+Figure 6. Algunas señales de salida de la simulación para el estado base.
 
 Axes 1. Heat demand
 Axes 2. Cumulative tomato production. (There are two campaigns)
@@ -73,9 +82,8 @@ Axes 3. Production of dry matter in the buffer, fruit, leaves and branches (Vant
 Axes 4. Behavior of the interior temperature against the temperature setpoint and the exterior temperature
 Axes 5. Electric demand for artificial light
 
-
-
-Figure 6. Algunas señales de salida de la simulación para el estado optimo.
+![](https://raw.githubusercontent.com/DeustoTech/KPI-Simulation-AGROSOFC/main/img/Fig7.png)
+<center>Figure 7. Algunas señales de salida de la simulación para el estado optimo.</center>
 
 Axes 1. Heat demand
 Axes 2. Cumulative tomato production. (There are two campaigns)
